@@ -1,10 +1,9 @@
-import { inflateRaw } from "https://deno.land/x/compress@v0.4.1/mod.ts";
+import { inflateRaw } from "https://deno.land/x/compress@v0.4.1/deflate/inflate_raw.ts";
 import {
   decode as base64UrlDecode,
 } from "https://deno.land/std@0.82.0/encoding/base64url.ts";
 
 export function parseShc(inputRaw: string) {
-  // const input_raw = await Deno.readTextFile("raw-2");
   const inputToken = String.fromCodePoint(...inputRaw
     .replaceAll(/\D/g, "") // strips the "shc:/"
     .match(/.{1,2}/g) // groups of 2
