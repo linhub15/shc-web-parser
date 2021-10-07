@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Card Parser</title>
+    <script type="module" src="/qr-reader.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container qr-info">
+    <h1 class="text-center">Smart Health Card Parser</h1>
+    <p>A web based implementation of Smart Health Card QR Parser.</p>
+    <p>Technology used:</p>
+    <ul>
+        <li><a href="https://deno.land/">Deno</a></li>
+        <li><a href="https://github.com/nimiq/qr-scanner">Nimiq's qr-scanner</a></li>
+    </ul>
+    <p>Inspired by <a href="https://mikkel.ca/blog/digging-into-quebecs-proof-of-vaccination/">Mikkel Paulson's blog post</a></p>
+    <p>This site does not store your QR code info, your browser will open the file and parse the QR code. No data is posted to any webservers.</p>
+    <p>- Source code on GitHub</p>
+    <hr>
+</div>
+<div class="container qr-selector">
+    <h2>QR Code image selector (jpg, png)</h2>
+    <input type="file" id="file-selector">
+</div>
+<div class="container qr-raw">
+    <h2>QR Code Raw results</h2>
+    <code class="result" id="file-qr-result"></code>
+</div>
+<div class="container qr-data">
+    <h2>QR Code JSON Data</h2>
+    <div class="scrollable-x">
+        <pre class="result" id="raw-result"></pre>
+    </div>
+</div>
+
+</body>
+</html>

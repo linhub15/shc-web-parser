@@ -1,0 +1,16 @@
+html, body {
+  font-family: 'acumin-pro-semi-condense', 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-raw .result { word-wrap: break-word; }
+
+.scrollable-x { overflow-x: auto; }
+
+.text-center { text-align: center; }
